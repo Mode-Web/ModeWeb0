@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cahier d'activités numérique – Art de table</title>
+  <link rel="icon" type="image/x-icon" href="logo.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a class="active" onclick="showSection(event, 'home')">Accueil</a>
+    <a onclick="showSection(event, 'activities')">Activités Pratiques</a>
+    <a onclick="showSection(event, 'videos')">Vidéos</a>
+    <a onclick="showSection(event, 'quiz')">Quiz</a>
+    <a onclick="showSection(event, 'fiches')">Fiches Techniques</a>
+    <a onclick="showSection(event, 'progress')">Progression</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <div id="home" class="section active">
+      <h1>Bienvenue dans le Cahier d'activités – Art de table</h1>
+      <p>Apprenez les bases de l’art de la table à travers des exercices interactifs, des vidéos explicatives et des quiz.</p>
+      <button class="btn" onclick="showSection(event, 'activities')">Commencer maintenant</button>
+    </div>
+
+    <div id="activities" class="section">
+      <h1>Activités Pratiques</h1>
+      <div class="grid">
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/763/763744.png" alt="">
+          <h3>Mise de Table</h3>
+          <p>Apprenez à disposer les assiettes, verres et couverts selon les règles d’art.</p>
+          <button class="btn">Commencer</button>
+        </div>
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="">
+          <h3>Service du Vin</h3>
+          <p>Découvrez comment servir le vin correctement selon les normes professionnelles.</p>
+          <button class="btn">Découvrir</button>
+        </div>
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="">
+          <h3>Accueil du Client</h3>
+          <p>Apprenez à accueillir un client avec élégance et courtoisie.</p>
+          <button class="btn">Essayer</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="videos" class="section">
+      <h1>Vidéos de Démonstration</h1>
+      <p>Regardez nos vidéos pour visualiser les gestes et techniques de service.</p>
+      <video controls width="350">
+        <source src="WhatsApp Video 2025-10-07 at 20.19.55.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div id="quiz" class="section">
+      <h1>Quiz – Testez vos connaissances</h1>
+      <p>Question : Quelle est la position correcte du verre à vin ?</p>
+      <button class="btn" onclick="alert('✅ Correct')">À droite de l’assiette</button>
+      <button class="btn" onclick="alert('❌ Faux')">À gauche de l’assiette</button>
+    </div>
+
+    <div id="fiches" class="section">
+      <h1>Fiches Techniques</h1>
+      <div class="card">
+        <h3>Les types de couverts</h3>
+        <p>Découvrez les différents types de couverts utilisés dans le service à table.</p>
+      </div>
+      <div class="card">
+        <h3>Les types de verres</h3>
+        <p>Verres à vin rouge, à vin blanc, à eau — apprenez à les reconnaître et les placer.</p>
+      </div>
+    </div>
+
+    <div id="progress" class="section">
+      <h1>Suivi de Progression</h1>
+      <p>Vous avez complété 65% du programme 🎯</p>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <ul>
+        <li>✅ Mise de Table — Terminé</li>
+        <li>🕒 Quiz en cours</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    // Navigation interactive
+    function showSection(event, id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+
+      document.querySelectorAll('.sidebar a').forEach(a => a.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
