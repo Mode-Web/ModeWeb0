@@ -33,9 +33,21 @@ header {
     text-align: center;
 }
 
-.logo {
+header .logo {
     width: 80px;
+    margin-bottom: 10px;
+}
+
+header .header-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
     margin-bottom: 15px;
+}
+
+header .header-images img {
+    max-width: 100px;
+    border-radius: 8px;
 }
 
 .site-title {
@@ -133,6 +145,7 @@ main h1, .platform-info {
     margin-bottom: 25px;
     color: #1f3650;
     font-size: 1.2em;
+    text-align: center;
 }
 
 .login-box input[type="text"],
@@ -187,14 +200,17 @@ main h1, .platform-info {
 <body>
 
 <header>
-    <img src="logo.jpeg" alt="logo" class="logo">
-    <img src="photo1" alt="" class="imagewh">
+    <img src="logo.jpeg" alt="Logo Cahier Interactif" class="logo">
+    <div class="header-images">
+        <img src="photo1.jpg" alt="Illustration 1">
+        <img src="photo2.jpg" alt="Illustration 2">
+    </div>
     <h2 class="site-title">Cahier Interactif d’Activités Numériques</h2>
 </header>
 
 <main>
     <h1>
-       Le Cahier interactif d'activités numériques en art de la table <strong style="color: #1f3650;">M. Yousfi Imad Eddine</strong>, enseignant formateur en Art de la Table, il vise à moderniser et faciliter la formation professionnelle.
+       Le Cahier interactif d'activités numériques en art de la table <strong style="color: #1f3650;">M. Yousfi Imad Eddine</strong>, enseignant formateur en Art de la Table, vise à moderniser et faciliter la formation professionnelle.
     </h1>
 
     <h2 class="platform-info">
