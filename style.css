@@ -175,15 +175,22 @@ strong {
   gap: 25px;
   justify-content: flex-start;
 }
+/* ======== CARDS ======== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  align-items: stretch;
+}
 
 .card {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 20px;
-  width: 280px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -192,16 +199,26 @@ strong {
 }
 
 .card img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
+  width: 100%;
+  max-width: 220px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
   margin-bottom: 15px;
 }
 
 .card h3 {
   color: #1f3650;
-  margin-bottom: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
 }
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
 
 /* ======== PROGRESS BAR ======== */
 .progress-bar {
