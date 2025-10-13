@@ -102,8 +102,76 @@ Accédez à des fiches techniques, démonstrations pas à pas et supports PDF po
     </div>
 
   </div>
+<!-- Fenêtre modale (popup) -->
+<div id="courseModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Module : Mise en place (version gratuite)</h2>
+    <p><strong>Professeur :</strong> Yousfi Imad Eddine</p>
+    <p><strong>Type de cours :</strong> Théorique</p>
+    <h3>Objectif pédagogique :</h3>
+    <p>À la fin de ce cours, l’apprenant sera capable de définir la notion de mise en place,
+    d’identifier les différents éléments nécessaires à la préparation de la salle avant le service et
+    de comprendre l’importance de l’organisation et de la présentation dans le bon
+    déroulement du service.</p>
 
+    <h3>Contenu du cours :</h3>
+    <p><strong>1️⃣ Définition de la mise en place</strong><br>
+    La mise en place désigne l’ensemble des préparatifs réalisés avant l’accueil du client,
+    destinés à assurer un service rapide, efficace et de qualité. Elle constitue la première étape
+    du service en salle et reflète le professionnalisme du personnel.</p>
+
+    <p><strong>2️⃣ Objectifs de la mise en place</strong><br>
+    - Garantir un service fluide et sans retard.<br>
+    - Assurer une bonne organisation du travail.<br>
+    - Maintenir une image soignée et professionnelle de l’établissement.<br>
+    - Prévenir les oublis et les erreurs pendant le service.</p>
+
+    <p><strong>3️⃣ Les étapes principales de la mise en place</strong><br>
+    1. Préparation du matériel : nettoyage et vérification de la vaisselle, verrerie, couverts, linge
+    et mobilier.<br>
+    2. Aménagement de la salle : disposition des tables, chaises, décoration et éléments de
+    confort.<br>
+    3. Dressage des tables : installation du linge, des couverts, verres, assiettes et accessoires
+    selon le type de service.<br>
+    4. Contrôle final : inspection générale avant l’ouverture du restaurant ou de la salle.</p>
+
+    <p><strong>4️⃣ Importance de la mise en place</strong><br>
+    Une mise en place bien réalisée permet de :<br>
+    - Gagner du temps pendant le service.<br>
+    - Offrir une expérience client agréable et fluide.<br>
+    - Valoriser le savoir-faire du serveur et l’image de l’établissement.</p>
+
+    <h3>Ressources disponibles (version gratuite)</h3>
+    <ul>
+      <li>📄 1 fiche technique en PDF : “Les étapes de la mise en place”</li>
+      <li>📝 1 mini quiz de révision (5 questions)</li>
+      <li>🎥 1 démonstration vidéo accessible uniquement dans la version complète</li>
+    </ul>
+  </div>
+</div>
   <script>
+
+  // ouvrir la fenêtre
+  function openModal() {
+    document.getElementById("courseModal").style.display = "block";
+  }
+
+  // fermer la fenêtre
+  function closeModal() {
+    document.getElementById("courseModal").style.display = "none";
+  }
+
+  // fermer عند النقر خارج المحتوى
+  window.onclick = function(event) {
+    const modal = document.getElementById("courseModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
+    
     // Navigation interactive
     function showSection(event, id) {
       document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
